@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Zero Degree</title>
+    <link rel="stylesheet" type="text/css" href="css-design.css">
+    <!-- Tambahkan Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="ZERO_-removebg-preview.png" alt="Zero Degree Logo" class="logo-img">
+                <span class="logo-text">Zero Degree</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="masalah.html"><i class="fas fa-tree"></i> Akar Masalah</a></li>
+                <li><a href="dampak.html"><i class="fas fa-water"></i> Dampak</a></li>
+                <li><a href="challenge.html"><i class="fas fa-tasks"></i> Eco-Challenge</a></li>
+            </ul>
+        </nav>
+    </header>
+ <section id="challenge">
+            <h2><i class="fas fa-seedling"></i> Eco-Challenge Harian</h2>
+            <p>Pilih tantangan di bawah ini dan centang ketika kamu telah menyelesaikannya. Fakta menarik akan muncul untuk menunjukkan dampak aksimu!</p>
+            
+            <div class="challenge-container">
+                <div class="challenge-card">
+                    <h3><span>🚗</span> Transportasi Ramah Iklim</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="transport1" data-fact="Naik transportasi umum 10 km/hari = Kurangi emisi setara 150 kg CO2/tahun">
+                        <label for="transport1">Naik transportasi umum hari ini</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="transport2" data-fact="Bersepeda atau jalan kaki untuk jarak dekat = Hindari emisi 0,5 kg CO2 per 5 km">
+                        <label for="transport2">Bersepeda atau jalan kaki</label>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><span>🛒</span> Konsumsi Bijak & Kurangi Sampah</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="konsumsi1" data-fact="Bawa tas belanja sendiri = Kurangi sampah plastik hingga 175 lembar/tahun/orang">
+                        <label for="konsumsi1">Bawa tas belanja sendiri</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="konsumsi2" data-fact="Pilih produk tanpa kemasan berlebihan = Bantu kurangi 1.900 kg emisi CO2/tahun dari proses produksi kemasan">
+                        <label for="konsumsi2">Pilih produk tanpa kemasan berlebihan</label>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><span>💡</span> Hemat Energi di Rumah</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="energi1" data-fact="Ganti 5 lampu ke LED = Kurangi emisi setara menanam 10 pohon/tahun">
+                        <label for="energi1">Ganti lampu ke LED</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="energi2" data-fact="Cabut charger yang tidak dipakai = Hemat listrik & cegah phantom energy yang buang-buang energi">
+                        <label for="energi2">Cabut charger tidak terpakai</label>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><span>🍃</span> Pola Makan & Hidup Berkelanjutan</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="makan1" data-fact="Kurangi makanan terbuang = 30% emisi global dari produksi pangan! Hemat makanan = kurangi emisi metana dari TPA">
+                        <label for="makan1">Kurangi makanan terbuang</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="makan2" data-fact="Makan lebih banyak tanaman = Jejak karbon daging 10x lebih tinggi daripada biji-bijian & sayuran">
+                        <label for="makan2">Makan lebih banyak tanaman</label>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><span>♻️</span> Pilah Sampah dengan Benar</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="sampah1" data-fact="Pilah sampah organik & anorganik = Bantu kurangi emisi metana dari TPA & dukung daur ulang efektif">
+                        <label for="sampah1">Pilah sampah organik & anorganik</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="sampah2" data-fact="1 botol plastik didaur ulang = Hemat energi untuk menyalakan lampu 3 jam">
+                        <label for="sampah2">Daur ulang botol plastik</label>
+                    </div>
+                </div>
+                
+                <div class="challenge-card">
+                    <h3><span>🧴</span> Gunakan Barang Ramah Lingkungan</h3>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="barang1" data-fact="Bawa tumbler = Kurangi sampah cup sekali pakai & hemat 500 kg CO2/tahun">
+                        <label for="barang1">Bawa tumbler</label>
+                    </div>
+                    <div class="challenge-item">
+                        <input type="checkbox" id="barang2" data-fact="Pakai sedotan stainless/bambu = Selamatkan jutaan sedotan plastik yang berakhir di laut">
+                        <label for="barang2">Pakai sedotan stainless/bambu</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Progress Tantangan</span>
+                    <span id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="fact-display" id="factDisplay">
+                <h3>🌱 Fakta Cepat: Aksi Simpel, Dampak Besar!</h3>
+                <p id="factText"></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+          
+            <p>"Dari Kita Untuk Bumi" - Zero Degree</p>
+    
+            
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const factDisplay = document.getElementById('factDisplay');
+            const factText = document.getElementById('factText');
+            const progressBar = document.getElementById('progress');
+            const progressPercentage = document.getElementById('progress-percentage');
+            
+            // Hitung total checklist
+            const totalCheckboxes = checkboxes.length;
+            let completedCheckboxes = 0;
+            
+            // Cek status dari local storage
+            checkboxes.forEach(checkbox => {
+                const isChecked = localStorage.getItem(checkbox.id) === 'true';
+                checkbox.checked = isChecked;
+                
+                if (isChecked) {
+                    completedCheckboxes++;
+                }
+                
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        completedCheckboxes++;
+                        // Tampilkan fakta
+                        factText.textContent = this.dataset.fact;
+                        factDisplay.classList.add('show');
+                        
+                        // Simpan status ke local storage
+                        localStorage.setItem(this.id, 'true');
+                    } else {
+                        completedCheckboxes--;
+                        factDisplay.classList.remove('show');
+                        localStorage.setItem(this.id, 'false');
+                    }
+                    
+                    // Update progress bar
+                    const progressValue = (completedCheckboxes / totalCheckboxes) * 100;
+                    progressBar.style.width = progressValue + '%';
+                    progressPercentage.textContent = Math.round(progressValue) + '%';
+                });
+            });
+            
+            // Inisialisasi progress bar
+            const progressValue = (completedCheckboxes / totalCheckboxes) * 100;
+            progressBar.style.width = progressValue + '%';
+            progressPercentage.textContent = Math.round(progressValue) + '%';
+        });
+    </script>
+</body>
+</html>
